@@ -9,7 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // MARK: Outlets (connections from the view)
+    
+    // MARK: Properties (variables) that can be used anywhere below
+    var shots = 0
 
+    // MARK: Built-in functions
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +26,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // MARK: My own functions
+    @IBAction func addShot(_ sender: Any) {
+        
+        // Add a shot
+        shots += 1
+        
+        // DEBUG: Print current shot count
+        print("Shots are at \(shots)")
+        
+    }
+    
 
 }
 
