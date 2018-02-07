@@ -62,5 +62,16 @@ class ViewController: UIViewController {
         //DEBUG: Print current assist count
         print("Assists are at \(assists)")
     }
+    // MARK: Properties (variables) that can be used anywhere below
+    var hit = 0
+    
+    @IBAction func addHit(_ sender: Any) {
+        
+        // Add a hit
+        hit += 1
+        
+          //DEBUG: Print current hit count
+        print("Hits are at \(hit)")
+    }
     
 }
