@@ -14,18 +14,18 @@ class ViewController: UIViewController {
     
     // MARK: Properties (variables) that can be used anywhere below
     var shots = 0
-
+    
     // MARK: Built-in functions
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: My own functions
     @IBAction func addShot(_ sender: Any) {
         
@@ -36,7 +36,19 @@ class ViewController: UIViewController {
         print("Shots are at \(shots)")
         
     }
+    // MARK: Properties (variables) that can be used anywhere below
+    var goals = 0
     
+    // MARK: My own functions
 
+    @IBAction func addGoal(_ sender: Any) {
+        
+        // Add a goal
+        goals += 1
+        
+        // DEBUG: Print current goal count
+        print("Goals are at \(goals)")
+        
+    }
+    
 }
-
