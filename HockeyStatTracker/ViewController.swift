@@ -51,4 +51,16 @@ class ViewController: UIViewController {
         
     }
     
+    // MARK: Properties (variables) that can be used anywhere below
+    var assists = 0
+    
+    @IBAction func addAssist(_ sender: Any) {
+        
+        // Add an assist
+        assists += 1
+        
+        //DEBUG: Print current assist count
+        print("Assists are at \(assists)")
+    }
+    
 }
