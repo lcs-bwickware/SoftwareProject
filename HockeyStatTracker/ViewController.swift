@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     var goals = 0
     
     // MARK: My own functions
-
+    
     @IBAction func addGoal(_ sender: Any) {
         
         // Add a goal
@@ -70,10 +70,10 @@ class ViewController: UIViewController {
         // Add a hit
         hit += 1
         
-          //DEBUG: Print current hit count
+        //DEBUG: Print current hit count
         print("Hits are at \(hit)")
     }
- 
+    
     var minus = 0
     
     @IBAction func addMinus(_ sender: Any) {
@@ -90,15 +90,11 @@ class ViewController: UIViewController {
     
     @IBAction func addPlus(_ sender: Any) {
         
-        // Add a plus
         plus += 1
         
-        //DEBUG: Print current plus count
         print("Plus is at \(plus)")
-        
-        
-        
     }
+    
     
     
 }

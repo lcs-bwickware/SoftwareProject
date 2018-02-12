@@ -113,8 +113,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="addMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z0f-xI-Qa0"/>
-                                    <action selector="addPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Mo-vv-H8f"/>
+                                    <action selector="addPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bdq-OM-OMQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNw-gu-agF">
