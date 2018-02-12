@@ -112,12 +112,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z0f-xI-Qa0"/>
+                                    <action selector="addPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Mo-vv-H8f"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNw-gu-agF">
                                 <rect key="frame" x="279" y="411" width="30" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="addMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kl9-dF-d0V"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gw-g7-Mhr">
                                 <rect key="frame" x="279" y="165" width="30" height="30"/>

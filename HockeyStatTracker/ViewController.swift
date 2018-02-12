@@ -73,5 +73,32 @@ class ViewController: UIViewController {
           //DEBUG: Print current hit count
         print("Hits are at \(hit)")
     }
+ 
+    var minus = 0
+    
+    @IBAction func addMinus(_ sender: Any) {
+        
+        // Add a minus
+        minus -= 1
+        
+        //DEBUG: Print current minus count
+        print("Minus is at \(minus)")
+        
+    }
+    
+    var plus = 0
+    
+    @IBAction func addPlus(_ sender: Any) {
+        
+        // Add a plus
+        plus += 1
+        
+        //DEBUG: Print current plus count
+        print("Plus is at \(plus)")
+        
+        
+        
+    }
+    
     
 }
