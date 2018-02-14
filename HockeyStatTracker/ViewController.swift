@@ -14,11 +14,17 @@ class ViewController: UIViewController {
     
     // MARK: Properties (variables) that can be used anywhere below
     var shots = 0
+    var timer = Timer()
+    var seconds = 0
+    var onIceGameActive = false
     
     // MARK: Built-in functions
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+       timer = Timer.scheduledTimer(timeInterval:1, target: self, selector: #selector(ViewController.addIceTime), userInfo: nil, repeats: true)
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,6 +33,25 @@ class ViewController: UIViewController {
     }
     
     // MARK: My own functions
+    @objc func addIceTime() {
+        if onIceGameActive == true {
+           seconds += 1
+             print(seconds)
+        }
+       
+        
+    }
+    @IBAction func startIceTime(_ sender: Any) {
+        
+        onIceGameActive = true
+    }
+    
+    @IBAction func addStopIceTime(_ sender: Any) {
+        
+        onIceGameActive = false
+    }
+    
+    
     @IBAction func addShot(_ sender: Any) {
         
         // Add a shot
