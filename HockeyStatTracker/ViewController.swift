@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: Outlets (connections from the view)
+    @IBOutlet weak var labelTime: UILabel!
     
     // MARK: Properties (variables) that can be used anywhere below
     var shots = 0
@@ -23,7 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
        timer = Timer.scheduledTimer(timeInterval:1, target: self, selector: #selector(ViewController.addIceTime), userInfo: nil, repeats: true)
-        
+    
         
     }
     
@@ -35,10 +36,10 @@ class ViewController: UIViewController {
     // MARK: My own functions
     @objc func addIceTime() {
         if onIceGameActive == true {
-           seconds += 1
+             seconds += 1
              print(seconds)
+             labelTime.text = String(seconds)
         }
-       
         
     }
     @IBAction func startIceTime(_ sender: Any) {
@@ -52,11 +53,13 @@ class ViewController: UIViewController {
     }
     
     
+ 
     @IBAction func addShot(_ sender: Any) {
         
         // Add a shot
         shots += 1
         
+
         // DEBUG: Print current shot count
         print("Shots are at \(shots)")
         
@@ -113,9 +116,12 @@ class ViewController: UIViewController {
     
     var plus = 0
     
+    @IBOutlet weak var lablePlusMinus: UILabel!
+
     @IBAction func addPlus(_ sender: Any) {
         
         plus += 1
+        lablePlusMinus.text = String(plus)
         
         print("Plus is at \(plus)")
     }
@@ -137,6 +143,7 @@ class ViewController: UIViewController {
         
         print("Penalty is at \(penaltyfour)")
     }
+    
     
     
 }
