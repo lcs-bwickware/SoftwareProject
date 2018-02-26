@@ -14,6 +14,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var labelIceTime: UILabel!
     
+    @IBOutlet weak var labelPenaltyMinutes: UILabel!
+    
+    @IBOutlet weak var labelPlusMinus: UILabel!
+    
+    @IBOutlet weak var labelHits: UILabel!
+    
+    @IBOutlet weak var labelAssists: UILabel!
+    
+    @IBOutlet weak var labelGoals: UILabel!
+    
+    @IBOutlet weak var labelShots: UILabel!
+    
     // MARK: Properties (variables) that can be used anywhere below
     var shots = 0
     var timer = Timer()
@@ -25,8 +37,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
        timer = Timer.scheduledTimer(timeInterval:1, target: self, selector: #selector(ViewController.addIceTime), userInfo: nil, repeats: true)
-        
-        
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,7 +70,7 @@ class ViewController: UIViewController {
         
         // Add a shot
         shots += 1
-        
+         labelShots.text = String(shots)
         // DEBUG: Print current shot count
         print("Shots are at \(shots)")
         
@@ -67,13 +78,15 @@ class ViewController: UIViewController {
     // MARK: Properties (variables) that can be used anywhere below
     var goals = 0
     
+    
     // MARK: My own functions
     
     @IBAction func addGoal(_ sender: Any) {
         
         // Add a goal
         goals += 1
-        
+        labelGoals.text = String(goals)
+       
         // DEBUG: Print current goal count
         print("Goals are at \(goals)")
         
@@ -86,6 +99,7 @@ class ViewController: UIViewController {
         
         // Add an assist
         assists += 1
+        labelAssists.text = String(assists)
         
         //DEBUG: Print current assist count
         print("Assists are at \(assists)")
@@ -97,6 +111,7 @@ class ViewController: UIViewController {
         
         // Add a hit
         hit += 1
+        labelHits.text = String(hit)
         
         //DEBUG: Print current hit count
         print("Hits are at \(hit)")
@@ -108,6 +123,7 @@ class ViewController: UIViewController {
         
         // Add a minus
         minus -= 1
+        labelPlusMinus.text = String(minus)
         
         //DEBUG: Print current minus count
         print("Minus is at \(minus)")
@@ -119,6 +135,7 @@ class ViewController: UIViewController {
     @IBAction func addPlus(_ sender: Any) {
         
         plus += 1
+        labelPlusMinus.text = String(plus)
         
         print("Plus is at \(plus)")
     }
@@ -128,6 +145,7 @@ class ViewController: UIViewController {
     @IBAction func add2minutepealty(_ sender: Any) {
         
         penaltyMinutes += 2
+        labelPenaltyMinutes.text = String(penaltyMinutes)
         
         print("Penalty is at \(penaltyMinutes)")
     }
@@ -135,6 +153,7 @@ class ViewController: UIViewController {
     @IBAction func add4minutepenalty(_ sender: Any) {
         
         penaltyMinutes += 4
+        labelPenaltyMinutes.text = String(penaltyMinutes)
         
         print("Penalty is at \(penaltyMinutes)")
     }
