@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     // MARK: Outlets (connections from the view)
     
+    @IBOutlet weak var labelIceTime: UILabel!
+    
     // MARK: Properties (variables) that can be used anywhere below
     var shots = 0
     var timer = Timer()
@@ -35,8 +37,9 @@ class ViewController: UIViewController {
     // MARK: My own functions
     @objc func addIceTime() {
         if onIceGameActive == true {
-           seconds += 1
-             print(seconds)
+            seconds += 1
+            print(seconds)
+            labelIceTime.text = String(seconds)
         }
        
         
