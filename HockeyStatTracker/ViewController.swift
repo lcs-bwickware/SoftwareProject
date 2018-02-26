@@ -123,22 +123,20 @@ class ViewController: UIViewController {
         print("Plus is at \(plus)")
     }
     
-    var penaltytwo = 0
+    var penaltyMinutes = 0
     
     @IBAction func add2minutepealty(_ sender: Any) {
         
-        penaltytwo += 2
+        penaltyMinutes += 2
         
-        print("Penalty is at \(penaltytwo)")
+        print("Penalty is at \(penaltyMinutes)")
     }
-    
-    var penaltyfour = 0
     
     @IBAction func add4minutepenalty(_ sender: Any) {
         
-        penaltyfour += 4
+        penaltyMinutes += 4
         
-        print("Penalty is at \(penaltyfour)")
+        print("Penalty is at \(penaltyMinutes)")
     }
     
     
